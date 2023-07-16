@@ -2,6 +2,7 @@ import { useThemeParams } from '@vkruglikov/react-telegram-web-app'
 import { ThemeProvider, createTheme, Theme } from '@mui/material/styles'
 import { Router } from './router'
 import { RouterProvider } from 'react-router-dom'
+import { Global, css } from '@emotion/react'
 
 declare global {
   interface Window { Telegram: { WebApp: any }; }
@@ -31,6 +32,11 @@ export type TTheme = {
   buttonText?: string;
 }
 
+const GlobalStyles = css`
+  @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+  }
+`
+
 function App() {
   const [colorScheme, themeParams] = useThemeParams();
 
@@ -43,9 +49,12 @@ function App() {
   } as any);
 
   return (
-    <ThemeProvider theme={theme} >
-      <RouterProvider router={Router} />
-    </ThemeProvider>
+		<div className='App'>
+			<Global styles={GlobalStyles} />
+			<ThemeProvider theme={theme} >
+      	<RouterProvider router={Router} />
+    	</ThemeProvider>
+		</div>
   );
 }
 

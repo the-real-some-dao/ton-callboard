@@ -32,11 +32,6 @@ export type TTheme = {
   buttonText?: string;
 }
 
-const GlobalStyles = css`
-  @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-  }
-`
-
 function App() {
   const [colorScheme, themeParams] = useThemeParams();
 
@@ -50,7 +45,6 @@ function App() {
 
   return (
 		<div className='App'>
-			<Global styles={GlobalStyles} />
 			<ThemeProvider theme={theme} >
       	<RouterProvider router={Router} />
     	</ThemeProvider>

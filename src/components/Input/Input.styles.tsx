@@ -11,7 +11,15 @@ export const InputRoot = styled(Input)(({ theme }: { theme: TTheme }) => ({
   alignItems: 'center',
 	outline: 'none',
 	border: 'none',
+	'margin': '0px 20px',
+	'padding': '5px 10px',
   '&.MuiInput-root::before': {
     border: 'none',
-  }
+  },
+  '&.MuiInput-root::after': {
+    border: 'none',
+  },
+	// '&.MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled, .Mui-error):before': {
+	// 	border: 'none',
+	// }
 }))

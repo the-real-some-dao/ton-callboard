@@ -18,7 +18,4 @@ export const HeaderInput = styled(Input)`
   width: 285px;
   height: 30px;
   border-radius: 8px;
-	.MuiInputBase-root::before {
-		border: none;
-	}
 `

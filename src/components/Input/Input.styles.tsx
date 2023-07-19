@@ -11,4 +11,7 @@ export const InputRoot = styled(Input)(({ theme }: { theme: TTheme }) => ({
   alignItems: 'center',
 	outline: 'none',
 	border: 'none',
+  '&.MuiInput-root::before': {
+    border: 'none',
+  }
 }))

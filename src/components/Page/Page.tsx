@@ -3,13 +3,13 @@ import { FC, PropsWithChildren } from 'react'
 import { PageRoot } from './Page.style'
 
 type TPageProps = PropsWithChildren & {
-
+  type: string;
 }
 
-export const Page: FC<TPageProps> = ({ children }) => {
+export const Page: FC<TPageProps> = ({ children, type }) => {
   return (
     <PageRoot>
-      <Header />
+      <Header page={type} />
       {children}
     </PageRoot>
   )

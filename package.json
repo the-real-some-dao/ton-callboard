@@ -2,7 +2,7 @@
   "name": "ton-callboard",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://the-real-some-dao.github.io/ton-callboard",
+  "homepage": "https://the-real-some-dao.github.io/ton-callboard/index.html",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@emotion/react": "^11.11.1",

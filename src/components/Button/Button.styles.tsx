@@ -9,4 +9,5 @@ export const ButtonRoot = styled(Button)(({ theme }: { theme: TTheme }) => ({
   justifyContent: 'center',
   alignItems: 'center',
   borderRadius: '25px',
+	fontFamily: "Inter"
 }))

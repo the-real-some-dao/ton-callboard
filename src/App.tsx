@@ -1,8 +1,10 @@
 import { useThemeParams } from '@vkruglikov/react-telegram-web-app'
 import { ThemeProvider, createTheme, Theme } from '@mui/material/styles'
-import { Router } from './router'
 import { RouterProvider } from 'react-router-dom'
-import { Global, css } from '@emotion/react'
+import { Provider } from 'react-redux'
+
+import { Router } from './router'
+import { store } from './store'
 
 declare global {
   interface Window { Telegram: { WebApp: any }; }
@@ -47,9 +49,11 @@ function App() {
 
   return (
 		<div className='App'>
-			<ThemeProvider theme={theme} >
-      	<RouterProvider router={Router} />
-    	</ThemeProvider>
+      <Provider store={store}>
+        <ThemeProvider theme={theme} >
+          <RouterProvider router={Router} />
+        </ThemeProvider>
+      </Provider>
 		</div>
   );
 }

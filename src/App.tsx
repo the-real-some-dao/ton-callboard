@@ -29,6 +29,7 @@ export type TTheme = {
   text?: string;
   link?: string;
   buttonText?: string;
+	secondaryBGColor?: string;
 }
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
     text: themeParams.text_color,
     link: themeParams.link_color,
     buttonText: themeParams.button_text_color,
+		secondaryBGColor: themeParams.secondary_bg_color,
   } as any);
 
   return (

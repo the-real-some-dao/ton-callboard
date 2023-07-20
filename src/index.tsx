@@ -12,14 +12,15 @@ root.render(
   <React.StrictMode>
     <Global styles={css`
 			@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-	*, *::after, *::before {
+	    *, *::after, *::before {
 				@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
         box-sizing: border-box;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         font-smoothing: antialiased;
       }
-	${emotionReset}
+      ${emotionReset}
 		`} />
     <App />
   </React.StrictMode>

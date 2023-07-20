@@ -1,9 +1,10 @@
 import { Page } from '../../components/Page'
+import { PageType } from '../constants'
 import { HeaderInput, InputContainer, LargeCommentary, MediumCommentary } from './AddTask.style'
 
 export const AddTask = () => {
   return (
-    <Page>
+    <Page type={PageType.AddTask} headerProps={{}}>
 			<InputContainer>
 				<LargeCommentary>
 					Что нужно сделать?

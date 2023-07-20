@@ -1,4 +1,5 @@
 import { ComponentProps } from 'react'
+import { PageType } from '../../pages/constants'
 
 export type THeaderConfigOptions = {
   tasks?: {
@@ -6,7 +7,7 @@ export type THeaderConfigOptions = {
   }
 }
 
-export type THeaderProps = ComponentProps & {
-  page: string;
-  pageOptions: any;
+export type THeaderProps = {
+  page: PageType;
+  headerProps: any;
 }

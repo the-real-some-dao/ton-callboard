@@ -6,8 +6,6 @@ import { TIconProps } from './types'
 
 export const Icon: FC<TIconProps> = ({ name }) => {
   return (
-    <SvgIcon>
-      {NameToSvg[name]}
-    </SvgIcon>
+    <SvgIcon component={NameToSvg[name]} />
   )
 }

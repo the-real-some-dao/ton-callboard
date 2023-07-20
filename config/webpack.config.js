@@ -373,6 +373,7 @@ module.exports = function (webpackEnv) {
             },
             {
               test: /\.svg$/,
+              enforce: "pre",
               use: [
                 {
                   loader: require.resolve('@svgr/webpack'),

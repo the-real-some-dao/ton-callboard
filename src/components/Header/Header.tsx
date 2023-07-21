@@ -3,6 +3,7 @@ import { THeaderProps } from './types'
 import { PageType } from '../../pages/constants'
 import { TasksHeader } from './components/TasksHeader'
 import { AddTaskHeader } from './components/AddTaskHeader'
+import { ChooseWalletHeader } from './components/ChooseWalletHeader'
 
 import { FC } from 'react'
 
@@ -13,6 +14,7 @@ type TComponentMap = {
 const ComponentMap: TComponentMap = {
   [PageType.Tasks]: TasksHeader,
   [PageType.AddTask]: AddTaskHeader,
+  [PageType.ChooseWallet]: ChooseWalletHeader,
 }
 
 const Header: FC<THeaderProps> = ({ page, headerProps }) => {

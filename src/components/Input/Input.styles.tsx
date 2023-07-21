@@ -4,7 +4,7 @@ import { TTheme } from '../../App';
 
 export const InputRoot = styled(Input)(({ theme }: { theme: TTheme }) => ({
   backgroundColor: theme.secondaryBGColor ?? '#3A4362',
-	color: 'white',
+	color: theme.text ?? 'white',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',

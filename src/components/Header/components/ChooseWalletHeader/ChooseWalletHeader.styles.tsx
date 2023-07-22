@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
-import { Button } from '../../../Button'
 
 export const HeaderRoot = styled.div`
+	display: flex;
+	flex-direction: row;
   color: #FFF;
 	font-size: 21px;
 	font-style: normal;

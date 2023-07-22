@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { Input } from "../../components/Input";
 import { Button } from "@mui/base";
+import { TTheme } from "../../App";
 
 
 export const InputContainer = styled.div`
@@ -19,25 +19,16 @@ export const MediumCommentary = styled.div`
 	line-height: normal;
 `
 
-export const FirstButton = styled(Button)`
-	width: 335px;
-	height: 50px;
-	margin-top: 15px;
-	padding: 10px;
-	border-radius: 5px;
-	border: 1px solid #3A4362;
-	background-color: transparent;
-`
-
-// export const FirstButton = styled(Button)(({ theme }: { theme: TTheme }) => ({
-// 	width: '335px',
-// 	height: '50px',
-// 	'margin-top': '15px',
-// 	padding: '10px',
-// 	'border-radius': '5px',
-// 	border: '1px solid theme.secondaryBGColor ?? #3A4362',
-// 	'background-color': 'transparent',
-// }))
+export const FirstButton = styled(Button)(({ theme }: { theme: TTheme }) => ({
+	width: '335px',
+	height: '50px',
+	'margin-top': '15px',
+	padding: '10px',
+	'border-radius': '5px',
+	border: '1px solid',
+	borderColor: theme.secondaryBGColor ?? '#3A4362',
+	'background-color': 'transparent',
+}))
 
 export const RectBreak = styled.div`
 	margin-top: 20px;
@@ -48,7 +39,7 @@ export const RectBreak = styled.div`
 	background: linear-gradient(135deg, rgba(255, 255, 255, 0.00) 0%, #FFF 48.96%, rgba(255, 255, 255, 0.00) 100%);
 `
 
-export const HintCommentary = styled.div`
+export const HintCommentary = styled.a`
 	width: 335px;
 	margin-top: 20px;
 	color: #45AEF5;
